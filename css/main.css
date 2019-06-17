@@ -53,13 +53,18 @@ ul {
 }
 
 .burger_menu {
-    position:absolute;
+    position:fixed;
+    z-index:1000;
     top:0;
     right:0;
+    text-align:right;
+    width:100%;
+    background-color:#131313;
 }
 
 .full_burger_line {
-    margin:15px 15px 0 0;
+    margin:15px 15px 15px 0;
+    display:inline-block;
 }
 
 .burger_line {
@@ -81,6 +86,10 @@ ul {
     border-radius:100%;
 }
 
+.work_text {
+    z-index:50;
+}
+
 .work_company {
     letter-spacing:.2em;
     font-size:2.4em;
@@ -99,7 +108,8 @@ ul {
 .work_page_banner {
     height:85%;
     width:100%;
-    background-color:purple;
+    background-color:#D02424;
+    z-index:49;
 }
 
 .work_descript_contain {
@@ -128,7 +138,7 @@ ul {
 .work_images {
     width:100%;
     height:200px;
-    background-color:purple;
+    background-color:#D02424;
 }
 
 /**FOOTER**/
@@ -160,4 +170,8 @@ ul {
     src:url(../fonts/LemonMilklight.otf);
     font-style:normal;
     font-weight:100;
+}
+
+.hidden {
+    display:none;
 }
