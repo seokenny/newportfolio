@@ -48,6 +48,7 @@ ul {
     flex-direction:column;
     justify-content:center;
     height:100%;
+    z-index:1005;
 }
 
 .side_line_base {
@@ -123,6 +124,15 @@ ul {
 }
 
 /**WORKS**/
+#work_container {
+}
+
+.wc_main {
+    height:100vh;
+    width:100%;
+    position:relative;
+}
+
 .work_circle {
     width:50%;
     padding-top:50%;
@@ -221,4 +231,12 @@ ul {
 
 .hidden {
     display:none;
+}
+
+.redbox {
+    width:100%;
+    height:100vh;
+    background-color:red;
+    position:fixed;
+    left:-100%;
 }

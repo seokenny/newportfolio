@@ -7,17 +7,94 @@
 // });
 
 $(".side_line_0").on('click',function(){
-    
-    if($('.side_line_0').css('width') !== 40){
         $(".side_line_0").animate({
+            width:40,
+            backgroundColor: '#D02424'
+        });
+        $(".side_line_1").animate({
+            width:20
+        });
+        $(".side_line_2").animate({
+            width:20
+        });
+        $(".side_line_3").animate({
+            width:20
+        });
+        $(".side_line_4").animate({
+            width:20
+        });
+});
+
+$(".side_line_1").on('click',function(){
+        $(".side_line_1").animate({
             width:40
         });
-    }
-    else if($('.side_line_0').css('width') == 40){
         $(".side_line_0").animate({
             width:20
         });
-    }
+        $(".side_line_2").animate({
+            width:20
+        });
+        $(".side_line_3").animate({
+            width:20
+        });
+        $(".side_line_4").animate({
+            width:20
+        });
+});
+
+$(".side_line_2").on('click',function(){
+    $(".side_line_2").animate({
+        width:40
+    });
+    $(".side_line_0").animate({
+        width:20
+    });
+    $(".side_line_1").animate({
+        width:20
+    });
+    $(".side_line_3").animate({
+        width:20
+    });
+    $(".side_line_4").animate({
+        width:20
+    });
+});
+
+$(".side_line_3").on('click',function(){
+    $(".side_line_3").animate({
+        width:40
+    });
+    $(".side_line_0").animate({
+        width:20
+    });
+    $(".side_line_1").animate({
+        width:20
+    });
+    $(".side_line_2").animate({
+        width:20
+    });
+    $(".side_line_4").animate({
+        width:20
+    });
+});
+
+$(".side_line_4").on('click',function(){
+    $(".side_line_4").animate({
+        width:40
+    });
+    $(".side_line_0").animate({
+        width:20
+    });
+    $(".side_line_1").animate({
+        width:20
+    });
+    $(".side_line_2").animate({
+        width:20
+    });
+    $(".side_line_3").animate({
+        width:20
+    });
 });
 
 
@@ -33,13 +110,15 @@ $(".m_nav_home").on('click',function(){
     $(".m_nav_menu").fadeOut(function(){
         $("#about_container").fadeOut(function(){
             $("#work_container").fadeIn();
+            $('.wc_main').fadeIn();
         });
     });
 });
 
 $('.m_nav_about').on('click',function(){
     $(".m_nav_menu").fadeOut(function(){
-        $('#work_container').fadeOut(function(){
+        $('.wc_main').fadeOut();
+        $('.m_work_page').fadeOut(function(){
             $('#about_container').fadeIn();
         });
     });
