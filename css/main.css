@@ -41,6 +41,21 @@ ul {
 	letter-spacing:0.1em;
 }
 
+.arrowcontain {
+    height:100%;
+    margin-left:10%;
+    width:80%;
+    position:relative;
+    overflow:hidden;
+}
+
+.down_arrow {
+    height:25px;
+    bottom:25%;
+    top:unset;
+    overflow:hidden;
+}
+
 /**NAVIGATION**/
 .side_line_nav {
     position:absolute;
@@ -56,6 +71,11 @@ ul {
     background-color:white;
     height:2px;
     margin:10px 0 10px 10px;
+}
+
+.side_line_0 {
+    background-color:#D02424;
+    width:40px;
 }
 
 .burger_menu {
@@ -136,8 +156,42 @@ ul {
 .work_circle {
     width:50%;
     padding-top:50%;
-    background-color:#D02424;
     border-radius:100%;
+}
+
+.rugsusa_circle {
+    background-image:url('../images/rugsbanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#D02424;
+}
+
+.fuyuramen_circle {
+    background-image:url('../images/fuyubanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#FFA53C;
+}
+
+.mystic_circle {
+    background-image:url('../images/mystiqbanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#2556D4;
+}
+
+.zombiedice_circle {
+    background-image:url('../images/zombiebanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#19BE6F;
+}
+
+.guesser_circle {
+    background-image:url('../images/guesserbanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:#9319BE;
 }
 
 .work_text {
@@ -162,8 +216,52 @@ ul {
 .work_page_banner {
     height:85%;
     width:100%;
-    background-color:#D02424;
     z-index:49;
+}
+
+.ru_p_banner {
+    background-image:url('../images/rugsbanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-color:#D02424;
+}
+
+.fr_p_banner {
+    background-image:url('../images/fuyubanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-color:#FFA53C;
+}
+
+.m_p_banner {
+    background-image:url('../images/mystiqbanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-color:#2556D4;
+}
+
+.zd_p_banner {
+    background-image:url('../images/zombiebanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-color:#19BE6F;
+}
+
+.g_p_banner {
+    background-image:url('../images/guesserbanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    background-color:#9319BE;
 }
 
 .work_descript_contain {
@@ -184,6 +282,20 @@ ul {
     letter-spacing:.2em;
     margin-bottom:25px;
     margin-top:25px;
+}
+
+.code_link {
+    display:inline-block;
+    border:1px solid white;
+    padding:10px;
+}
+
+.cl1 {
+    margin-right:5px;
+}
+
+.cl2 {
+    margin-left:5px;
 }
 
 .work_descript_text {
