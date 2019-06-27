@@ -182,10 +182,14 @@ $(".side_line_4").on('click',function(){
 });
 
 $(".go_back p").on('click',function(){
-    $(".rugsusa_circle").fadeIn();
-    $(".go_back").fadeOut();
-    $(".side_line_nav").fadeIn();
-    $(".rugsusa_work_page").fadeOut();
+    $("html, body").animate({
+        scrollTop: $(".m_work_page").offset().top
+    },750, 'easeOutExpo', function(){
+        $(".rugsusa_circle").fadeIn();
+        $(".go_back").fadeOut();
+        $(".side_line_nav").fadeIn();
+        $(".rugsusa_work_page").fadeOut();
+    });
 });
 
 $(".work_circle").on('click',function(){
