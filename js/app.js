@@ -181,38 +181,48 @@ $(".side_line_4").on('click',function(){
     });
 });
 
-
-$(".work_page_banner").on('click',function(){
+$(".go_back p").on('click',function(){
     $(".rugsusa_circle").fadeIn();
+    $(".go_back").fadeOut();
+    $(".side_line_nav").fadeIn();
     $(".rugsusa_work_page").fadeOut();
+});
+
+$(".work_circle").on('click',function(){
+    $(".go_back").fadeIn();
 });
 
 $(".rugsusa_circle").on('click',function(){
     $(".rugsusa_circle").fadeOut();
+    $(".side_line_nav").fadeOut();
     $(".rugsusa_work_page").fadeIn();
 });
 
 $(".fuyuramen_circle").on('click',function(){
     $(".fuyuramen_work_page").fadeIn();
+    $(".fuyuramen_circle").fadeOut();
 });
 
 $(".mystic_circle").on('click',function(){
     $(".mystic_work_page").fadeIn();
+    $(".mystic_circle").fadeOut();
 });
 
 $(".zombiedice_circle").on('click',function(){
     $(".zombiedice_work_page").fadeIn();
+    $(".zombiedice_circle").fadeOut();
 });
 
 $(".guesser_circle").on('click',function(){
     $(".guesser_work_page").fadeIn();
+    $(".guesser_circle").fadeOut();
 });
 
 $(".m_nav_home").on('click',function(){
     $(".m_nav_menu").fadeOut(function(){
         $("#about_container").fadeOut(function(){
             $("#work_container").fadeIn();
-            $('.wc_main').fadeIn();
+            $('.rugs_wc_main').fadeIn();
         });
     });
 });
@@ -222,6 +232,15 @@ $('.m_nav_about').on('click',function(){
         $('.wc_main').fadeOut();
         $('.m_work_page').fadeOut(function(){
             $('#about_container').fadeIn();
+        });
+    });
+});
+
+$(".m_nav_contact").on('click',function(){
+    $(".m_nav_menu").fadeOut(function(){
+        $(".wc_main").fadeOut();
+        $("#about_container").fadeOut(function(){
+            $("#contact_container").fadeIn();
         });
     });
 });

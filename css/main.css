@@ -352,3 +352,19 @@ ul {
     position:fixed;
     left:-100%;
 }
+
+/***CONTACT***/
+input, label, textarea {
+    display:block;
+}
+
+/**GOBACK**/
+.go_back {
+    font-size:.8em;
+    margin-left:15px;
+    text-align:left;
+}
+
+.go_back p {
+    display:inline-block;
+}
