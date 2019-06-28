@@ -192,6 +192,11 @@ $(".go_back p").on('click',function(){
     });
 });
 
+$(".down_arrow").on('click',function(){
+    $("html, body").animate({
+        scrollTop: $(".work_descript_contain").offset().top - 100},750, 'easeOutExpo');
+});
+
 $(".work_circle").on('click',function(){
     $(".go_back").fadeIn();
 });
