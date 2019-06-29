@@ -1,11 +1,3 @@
-// $(".work_descript_text").on('click',function(){
-//     $(".work_descript_text").animate({opacity:0});
-// });
-
-// $(".work_descript_header").on('click',function(){
-//     $(".work_descript_text").animate({opacity:1});
-// });
-
 $(".side_line_0").on('click',function(){
         $(".fuyu_wc_main").fadeOut(function(){
             $(".rugs_wc_main").fadeIn();
@@ -186,15 +178,48 @@ $(".go_back p").on('click',function(){
         scrollTop: $(".m_work_page").offset().top
     },750, 'easeOutExpo', function(){
         $(".rugsusa_circle").fadeIn();
+        $(".fuyuramen_circle").fadeIn();
+        $(".mystic_circle").fadeIn();
+        $(".zombiedice_circle").fadeIn();
+        $(".guesser_circle").fadeIn();
         $(".go_back").fadeOut();
         $(".side_line_nav").fadeIn();
         $(".rugsusa_work_page").fadeOut();
+        $(".fuyuramen_work_page").fadeOut();
+        $(".mystic_work_page").fadeOut();
+        $(".zombiedice_work_page").fadeOut();
+        $(".guesser_work_page").fadeOut();
     });
 });
 
-$(".down_arrow").on('click',function(){
+$(".rugsusa_down_arrow").on('click',function(){
     $("html, body").animate({
-        scrollTop: $(".work_descript_contain").offset().top - 100},750, 'easeOutExpo');
+        scrollTop: $(".rugsusa_work_descript").offset().top - 100},750,
+        'easeOutExpo');
+});
+
+$(".fuyuramen_down_arrow").on('click',function(){
+    $("html, body").animate({
+        scrollTop: $(".fuyuramen_work_descript").offset().top - 100},750,
+        'easeOutExpo');
+});
+
+$(".mystiq_down_arrow").on('click',function(){
+    $("html, body").animate({
+        scrollTop: $(".mystiq_work_descript").offset().top - 100},750,
+        'easeOutExpo');
+});
+
+$(".zombiedice_down_arrow").on('click',function(){
+    $("html, body").animate({
+        scrollTop: $(".zombiedice_work_descript").offset().top - 100},750,
+        'easeOutExpo');
+});
+
+$(".guesser_down_arrow").on('click',function(){
+    $("html, body").animate({
+        scrollTop: $(".guesser_work_descript").offset().top - 100},750,
+        'easeOutExpo');
 });
 
 $(".work_circle").on('click',function(){
@@ -227,6 +252,7 @@ $(".guesser_circle").on('click',function(){
     $(".guesser_circle").fadeOut();
 });
 
+/**NAVIGATION */
 $(".m_nav_home").on('click',function(){
     $(".m_nav_menu").fadeOut(function(){
         $("#about_container").fadeOut(function(){
