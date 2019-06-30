@@ -367,14 +367,18 @@ $(".mystic_wc_main").stop().touchwipe({
 
 $(".zombie_wc_main").stop().touchwipe({
     wipeDown: function(){
-        $(".zombie_wc_main").stop().fadeOut(function(){
-            $(".guesser_wc_main").stop().fadeIn();
-        });
+        if( $(".m_work_page").css('display') == 'block'){
+            $(".zombie_wc_main").stop().fadeOut(function(){
+                $(".guesser_wc_main").stop().fadeIn();
+            });
+        }
     },
     wipeUp: function(){
-        $(".zombie_wc_main").stop().fadeOut(function(){
-            $(".mystic_wc_main").stop().fadeIn();
-        });
+        if( $(".m_work_page").css('display') == 'block'){
+            $(".zombie_wc_main").stop().fadeOut(function(){
+                $(".mystic_wc_main").stop().fadeIn();
+            });
+        }
     }
 });
 
