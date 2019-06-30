@@ -192,10 +192,15 @@ $(".go_back p").on('click',function(){
     });
 });
 
-$(".rugsusa_down_arrow").on('click',function(){
-    $("html, body").animate({
-        scrollTop: $(".rugsusa_work_descript").offset().top - 100},750,
+function scrollDownward() {
+    $("html, body").stop().animate({
+        scrollTop: $(".rugsusa_work_descript").stop().offset().top - 100},750,
         'easeOutExpo');
+        console.log('working');
+}
+
+$(".rugsusa_down_arrow").on('click',function(){
+    scrollDownward();
 });
 
 $(".fuyuramen_down_arrow").on('click',function(){
@@ -253,40 +258,63 @@ $(".guesser_circle").on('click',function(){
 });
 
 /**NAVIGATION */
+// $(".m_nav_home").stop().on('click',function(){
+//     $(".m_nav_menu").stop().fadeOut(function(){
+//         $("#contact_container").stop().fadeOut();
+//         $("#about_container").stop().fadeOut(function(){
+//             $('.work_circle_contain').stop().fadeIn();
+//         });
+//     });
+// });
+
+// $('.m_nav_about').stop().on('click',function(){
+//     $(".m_nav_menu").stop().fadeOut(function(){
+//         $('.work_circle_contain').stop().fadeOut();
+//         $(".rugsusa_work_page").fadeOut();
+//         $('.m_work_page').stop().fadeOut(function(){
+//             $('#about_container').stop().fadeIn();
+//         });
+//     });
+// });
+
+
+// $(".m_nav_contact").on('click',function(){
+//     $(".m_nav_menu").fadeOut(function(){
+//         $(".work_circle_contain").fadeOut();
+//         $("#about_container").fadeOut(function(){
+//             $("#contact_container").fadeIn();
+//         });
+//     });
+// });
+
+// $(".full_burger_line").on('click',function(){
+//     if($(".m_nav_menu").css('display') == 'block'){
+//         $(".m_nav_menu").fadeOut();
+//         $("#container").removeAttr('style'); 
+//     }
+//     else {
+//         $(".m_nav_menu").fadeIn();
+//         $("#container").css('overflowY','auto');
+//     }
+// });
+
 $(".m_nav_home").on('click',function(){
-    $(".m_nav_menu").fadeOut(function(){
-        $("#about_container").fadeOut(function(){
-            $("#work_container").fadeIn();
-            $('.rugs_wc_main').fadeIn();
-        });
-    });
+    $(".m_nav_menu").toggleClass("hidden");
+    $(".work_circle_contain").removeClass("fadeOut");
+    $(".work_circle_contain").addClass("fadeIn");
+    $("#about_container").removeClass("fadeIn");
+    $("#about_container").addClass("fadeOut");
 });
 
-$('.m_nav_about').on('click',function(){
-    $(".m_nav_menu").fadeOut(function(){
-        $('.wc_main').fadeOut();
-        $('.m_work_page').fadeOut(function(){
-            $('#about_container').fadeIn();
-        });
-    });
-});
-
-$(".m_nav_contact").on('click',function(){
-    $(".m_nav_menu").fadeOut(function(){
-        $(".wc_main").fadeOut();
-        $("#about_container").fadeOut(function(){
-            $("#contact_container").fadeIn();
-        });
-    });
+$(".m_nav_about").on('click',function(){
+    $(".m_nav_menu").toggleClass("hidden");
+    $(".work_circle_contain").addClass("fadeOut");
+    $("#about_container").removeClass("hidden");
+    $("#about_container").removeClass("fadeOut");
+    $("#about_container").addClass("fadeIn");
 });
 
 $(".full_burger_line").on('click',function(){
-    if($(".m_nav_menu").css('display') == 'block'){
-        $(".m_nav_menu").fadeOut();
-        $("#container").removeAttr('style'); 
-    }
-    else {
-        $(".m_nav_menu").fadeIn();
-        $("#container").css('overflowY','auto');
-    }
+    $(".m_nav_menu").toggleClass("hidden");
+    $(".m_nav_menu").toggleClass("slideInRight");
 });
