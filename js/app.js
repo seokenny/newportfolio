@@ -330,3 +330,58 @@ window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+$(".rugs_wc_main").touchwipe({
+    wipeDown: function(){
+        $(".rugs_wc_main").fadeOut(function(){
+            $(".fuyu_wc_main").fadeIn();
+        });
+    }
+});
+
+$(".fuyu_wc_main").stop().touchwipe({
+    wipeDown: function(){
+        $(".fuyu_wc_main").stop().fadeOut(function(){
+            $(".mystic_wc_main").stop().fadeIn();
+        });
+    },
+    wipeUp: function(){
+        $(".fuyu_wc_main").stop().fadeOut(function(){
+            $(".rugs_wc_main").stop().fadeIn();
+        });
+    }
+});
+
+$(".mystic_wc_main").stop().touchwipe({
+    wipeDown: function(){
+        $(".mystic_wc_main").stop().fadeOut(function(){
+            $(".zombie_wc_main").stop().fadeIn();
+        });
+    },
+    wipeUp: function(){
+        $(".mystic_wc_main").stop().fadeOut(function(){
+            $(".fuyu_wc_main").stop().fadeIn();
+        });
+    }
+});
+
+$(".zombie_wc_main").stop().touchwipe({
+    wipeDown: function(){
+        $(".zombie_wc_main").stop().fadeOut(function(){
+            $(".guesser_wc_main").stop().fadeIn();
+        });
+    },
+    wipeUp: function(){
+        $(".zombie_wc_main").stop().fadeOut(function(){
+            $(".mystic_wc_main").stop().fadeIn();
+        });
+    }
+});
+
+$(".guesser_wc_main").stop().touchwipe({
+    wipeUp: function(){
+        $(".guesser_wc_main").stop().fadeOut(function(){
+            $(".zombie_wc_main").stop().fadeIn();
+        });
+    }
+});
