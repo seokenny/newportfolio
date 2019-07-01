@@ -11,26 +11,7 @@ $(".side_line_0").on('click',function(){
         $(".guesser_wc_main").fadeOut(function(){
             $(".rugs_wc_main").fadeIn();
         });
-        $(".side_line_0").animate({
-            width:40,
-            backgroundColor: '#D02424'
-        });
-        $(".side_line_1").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
-        $(".side_line_2").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
-        $(".side_line_3").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
-        $(".side_line_4").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
+        rugsusaSideLine();
 });
 
 $(".side_line_1").on('click',function(){
@@ -46,26 +27,7 @@ $(".side_line_1").on('click',function(){
         $(".guesser_wc_main").fadeOut(function(){
             $(".fuyu_wc_main").fadeIn();
         });
-        $(".side_line_1").animate({
-            width:40,
-            backgroundColor: '#FFA53C'
-        });
-        $(".side_line_0").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
-        $(".side_line_2").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
-        $(".side_line_3").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
-        $(".side_line_4").animate({
-            width:20,
-            backgroundColor: 'white'
-        });
+        fuyuramenSideLine();
 });
 
 $(".side_line_2").on('click',function(){
@@ -81,26 +43,7 @@ $(".side_line_2").on('click',function(){
     $(".guesser_wc_main").fadeOut(function(){
         $(".mystic_wc_main").fadeIn();
     });
-    $(".side_line_2").animate({
-        width:40,
-        backgroundColor:'#2556D4'
-    });
-    $(".side_line_0").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
-    $(".side_line_1").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
-    $(".side_line_3").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
-    $(".side_line_4").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
+    mysticSideLine();
 });
 
 $(".side_line_3").on('click',function(){
@@ -116,26 +59,7 @@ $(".side_line_3").on('click',function(){
     $(".guesser_wc_main").fadeOut(function(){
         $(".zombie_wc_main").fadeIn();
     });
-    $(".side_line_3").animate({
-        width:40,
-        backgroundColor:'#19BE6F'
-    });
-    $(".side_line_0").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
-    $(".side_line_1").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
-    $(".side_line_2").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
-    $(".side_line_4").animate({
-        width:20,
-        backgroundColor: 'white'
-    });
+    zombieSideLine();
 });
 
 $(".side_line_4").on('click',function(){
@@ -151,32 +75,14 @@ $(".side_line_4").on('click',function(){
     $(".zombie_wc_main").fadeOut(function(){
         $(".guesser_wc_main").fadeIn();
     });
-    $(".side_line_4").animate({
-        width:40,
-        backgroundColor:'#9319BE'
-    });
-    $(".side_line_0").animate({
-        width:20,
-        backgroundColor:'white'
-    });
-    $(".side_line_1").animate({
-        width:20,
-        backgroundColor:'white'
-    });
-    $(".side_line_2").animate({
-        width:20,
-        backgroundColor:'white'
-    });
-    $(".side_line_3").animate({
-        width:20,
-        backgroundColor:'white'
-    });
+    guesserSideLine();
 });
 
 $(".go_back p").on('click',function(){
     $("html, body").animate({
         scrollTop: $(".m_work_page").offset().top
     },750, 'easeOutExpo', function(){
+        $(".swipe_overlay").show();
         $(".rugsusa_circle").fadeIn();
         $(".fuyuramen_circle").fadeIn();
         $(".mystic_circle").fadeIn();
@@ -231,9 +137,11 @@ $(".work_circle").on('click',function(){
     $(".go_back").fadeIn();
 });
 
+/**WORK CIRCLE**/
 $(".rugsusa_circle").on('click',function(){
     $(".rugsusa_circle").fadeOut();
     $(".side_line_nav").fadeOut();
+    $(".swipe_overlay").fadeOut();
     $(".rugsusa_work_page").fadeIn();
 });
 
@@ -257,47 +165,7 @@ $(".guesser_circle").on('click',function(){
     $(".guesser_circle").fadeOut();
 });
 
-/**NAVIGATION */
-// $(".m_nav_home").stop().on('click',function(){
-//     $(".m_nav_menu").stop().fadeOut(function(){
-//         $("#contact_container").stop().fadeOut();
-//         $("#about_container").stop().fadeOut(function(){
-//             $('.work_circle_contain').stop().fadeIn();
-//         });
-//     });
-// });
-
-// $('.m_nav_about').stop().on('click',function(){
-//     $(".m_nav_menu").stop().fadeOut(function(){
-//         $('.work_circle_contain').stop().fadeOut();
-//         $(".rugsusa_work_page").fadeOut();
-//         $('.m_work_page').stop().fadeOut(function(){
-//             $('#about_container').stop().fadeIn();
-//         });
-//     });
-// });
-
-
-// $(".m_nav_contact").on('click',function(){
-//     $(".m_nav_menu").fadeOut(function(){
-//         $(".work_circle_contain").fadeOut();
-//         $("#about_container").fadeOut(function(){
-//             $("#contact_container").fadeIn();
-//         });
-//     });
-// });
-
-// $(".full_burger_line").on('click',function(){
-//     if($(".m_nav_menu").css('display') == 'block'){
-//         $(".m_nav_menu").fadeOut();
-//         $("#container").removeAttr('style'); 
-//     }
-//     else {
-//         $(".m_nav_menu").fadeIn();
-//         $("#container").css('overflowY','auto');
-//     }
-// });
-
+/**NAVIGATION**/
 $(".m_nav_home").on('click',function(){
     $(".m_nav_menu").toggleClass("hidden");
     $(".work_circle_contain").removeClass("fadeOut");
@@ -331,61 +199,135 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-$(".rugs_wc_main").touchwipe({
-    wipeDown: function(){
-        $(".rugs_wc_main").fadeOut(function(){
-            $(".fuyu_wc_main").fadeIn();
-        });
-    }
-});
 
-$(".fuyu_wc_main").stop().touchwipe({
+/**CIRCLE SWIPING**/
+$(".swipe_overlay").stop().touchwipe({
     wipeDown: function(){
-        $(".fuyu_wc_main").stop().fadeOut(function(){
-            $(".mystic_wc_main").stop().fadeIn();
-        });
-    },
-    wipeUp: function(){
-        $(".fuyu_wc_main").stop().fadeOut(function(){
-            $(".rugs_wc_main").stop().fadeIn();
-        });
-    }
-});
-
-$(".mystic_wc_main").stop().touchwipe({
-    wipeDown: function(){
-        $(".mystic_wc_main").stop().fadeOut(function(){
-            $(".zombie_wc_main").stop().fadeIn();
-        });
-    },
-    wipeUp: function(){
-        $(".mystic_wc_main").stop().fadeOut(function(){
-            $(".fuyu_wc_main").stop().fadeIn();
-        });
-    }
-});
-
-$(".zombie_wc_main").stop().touchwipe({
-    wipeDown: function(){
-        if( $(".m_work_page").css('display') == 'block'){
-            $(".zombie_wc_main").stop().fadeOut(function(){
-                $(".guesser_wc_main").stop().fadeIn();
+        if($(".rugs_wc_main").css("display") == "block"){
+            $(".rugs_wc_main").fadeOut(function(){
+                $(".fuyu_wc_main").fadeIn();
+                fuyuramenSideLine();
+            });
+        }
+        else if($(".fuyu_wc_main").css("display") == "block"){
+            $(".fuyu_wc_main").fadeOut(function(){
+                $(".mystic_wc_main").fadeIn();
+                mysticSideLine();
+            });
+        }
+        else if($(".mystic_wc_main").css("display") == "block"){
+            $(".mystic_wc_main").fadeOut(function(){
+                $(".zombie_wc_main").fadeIn();
+                zombieSideLine();
+            });
+        }
+        else if($(".zombie_wc_main").css("display") == "block"){
+            $(".zombie_wc_main").fadeOut(function(){
+                $(".guesser_wc_main").fadeIn();
+                guesserSideLine();
             });
         }
     },
     wipeUp: function(){
-        if( $(".m_work_page").css('display') == 'block'){
-            $(".zombie_wc_main").stop().fadeOut(function(){
-                $(".mystic_wc_main").stop().fadeIn();
+        if($(".fuyu_wc_main").css("display") == "block"){
+            $(".fuyu_wc_main").fadeOut(function(){
+                $(".rugs_wc_main").fadeIn();
+                rugsusaSideLine();
+            });
+        }
+        else if($(".mystic_wc_main").css("display") == "block"){
+            $(".mystic_wc_main").fadeOut(function(){
+                $(".fuyu_wc_main").fadeIn();
+                fuyuramenSideLine();
+            });
+        }
+        else if($(".zombie_wc_main").css("display") == "block"){
+            $(".zombie_wc_main").fadeOut(function(){
+                $(".mystic_wc_main").fadeIn();
+                mysticSideLine();
+            });
+        }
+        else if($(".guesser_wc_main").css("display") == "block"){
+            $(".guesser_wc_main").fadeOut(function(){
+                $(".zombie_wc_main").fadeIn();
+                zombieSideLine();
             });
         }
     }
 });
 
-$(".guesser_wc_main").stop().touchwipe({
-    wipeUp: function(){
-        $(".guesser_wc_main").stop().fadeOut(function(){
-            $(".zombie_wc_main").stop().fadeIn();
-        });
+/**FUNCTIONS**/
+function rugsusaSideLine(){
+    $(".side_line_0").animate({
+        width:40,
+        backgroundColor: "#D02424"
+    });
+    for(var i = 0; i < 5; i++){
+        if(i !== 0){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+        }
     }
-});
+}
+
+function fuyuramenSideLine(){
+    $(".side_line_1").animate({
+        width:40,
+        backgroundColor: '#FFA53C'
+    });
+    for(var i = 0; i < 5; i++){
+        if(i !== 1){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+        }
+    }
+}
+
+function mysticSideLine(){
+    $(".side_line_2").animate({
+        width:40,
+        backgroundColor:'#2556D4'
+    });
+    for(var i = 0; i < 5; i++){
+        if(i !== 2){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+        }
+    }
+}
+
+function zombieSideLine(){
+    $(".side_line_3").animate({
+        width:40,
+        backgroundColor:'#19BE6F'
+    });
+    for(var i = 0; i < 5; i++){
+        if(i !== 3){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+        }
+    }
+}
+
+function guesserSideLine(){
+    $(".side_line_4").animate({
+        width:40,
+        backgroundColor:'#9319BE'
+    });
+    for(var i = 0; i < 5; i++){
+        if(i !== 4){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+        }
+    }
+}
