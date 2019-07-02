@@ -125,6 +125,7 @@ $(".zombiedice_down_arrow").on('click',function(){
     $("html, body").animate({
         scrollTop: $(".zombiedice_work_descript").offset().top - 100},750,
         'easeOutExpo');
+        console.log("asdasdsadsa");
 });
 
 $(".guesser_down_arrow").on('click',function(){
@@ -147,36 +148,43 @@ $(".rugsusa_circle").on('click',function(){
 
 $(".fuyuramen_circle").on('click',function(){
     $(".fuyuramen_work_page").fadeIn();
+    $(".side_line_nav").fadeOut();
+    $(".swipe_overlay").fadeOut();
     $(".fuyuramen_circle").fadeOut();
 });
 
 $(".mystic_circle").on('click',function(){
     $(".mystic_work_page").fadeIn();
+    $(".side_line_nav").fadeOut();
+    $(".swipe_overlay").fadeOut();
     $(".mystic_circle").fadeOut();
 });
 
 $(".zombiedice_circle").on('click',function(){
     $(".zombiedice_work_page").fadeIn();
+    $(".side_line_nav").fadeOut();
+    $(".swipe_overlay").fadeOut();
     $(".zombiedice_circle").fadeOut();
 });
 
 $(".guesser_circle").on('click',function(){
     $(".guesser_work_page").fadeIn();
+    $(".side_line_nav").fadeOut();
+    $(".swipe_overlay").fadeOut();
     $(".guesser_circle").fadeOut();
 });
 
 /**NAVIGATION**/
 $(".m_nav_home").on('click',function(){
     $(".m_nav_menu").toggleClass("hidden");
-    $(".work_circle_contain").removeClass("fadeOut");
-    $(".work_circle_contain").addClass("fadeIn");
     $("#about_container").removeClass("fadeIn");
+    $("#about_container").fadeOut();
     $("#about_container").addClass("fadeOut");
+    $("#about_container").addClass("hidden");
 });
 
 $(".m_nav_about").on('click',function(){
     $(".m_nav_menu").toggleClass("hidden");
-    $(".work_circle_contain").addClass("fadeOut");
     $("#about_container").removeClass("hidden");
     $("#about_container").removeClass("fadeOut");
     $("#about_container").addClass("fadeIn");
@@ -331,3 +339,7 @@ function guesserSideLine(){
         }
     }
 }
+
+$(".rugsusa_circle").on('click',function(){
+    console.log('asdas');
+});
