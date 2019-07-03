@@ -176,15 +176,18 @@ $(".guesser_circle").on('click',function(){
 
 /**NAVIGATION**/
 $(".m_nav_home").on('click',function(){
-    $(".m_nav_menu").toggleClass("hidden");
+    $(".m_nav_menu").toggleClass("hidden", 300);
+    $(".side_line_nav").fadeIn();
+    $(".m_nav_menu").removeClass("slideInRight");
     $("#about_container").removeClass("fadeIn");
-    $("#about_container").fadeOut();
     $("#about_container").addClass("fadeOut");
     $("#about_container").addClass("hidden");
 });
 
 $(".m_nav_about").on('click',function(){
-    $(".m_nav_menu").toggleClass("hidden");
+    $(".m_nav_menu").toggleClass("hidden", 300);
+    $(".side_line_nav").fadeOut();
+    $(".m_nav_menu").removeClass("slideInRight");
     $("#about_container").removeClass("hidden");
     $("#about_container").removeClass("fadeOut");
     $("#about_container").addClass("fadeIn");
@@ -192,7 +195,7 @@ $(".m_nav_about").on('click',function(){
 
 $(".full_burger_line").on('click',function(){
     $(".m_nav_menu").toggleClass("hidden");
-    $(".m_nav_menu").toggleClass("slideInRight");
+    $(".m_nav_menu").addClass("slideInRight");
 });
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -342,4 +345,18 @@ function guesserSideLine(){
 
 $(".rugsusa_circle").on('click',function(){
     console.log('asdas');
+});
+
+$(".m_nav_about, .m_nav_home").on("click",function(){
+    $(".trans1").delay(100).animate({
+        left:"100%"
+    }, 2000, "easeOutExpo");
+    $(".trans2").delay(200).animate({
+        left:"100%"
+    }, 2000, "easeOutExpo");
+    $(".trans3").delay(300).animate({
+        left:"100%"
+    }, 2000, "easeOutExpo");
+
+    $(".transition").delay(500).css("left","-100%");
 });

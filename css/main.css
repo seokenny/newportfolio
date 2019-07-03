@@ -121,7 +121,6 @@ ul {
     height:100%;
     position:fixed;
     z-index:1006;
-    background-image:url("../images/animation.gif");
     background-size:cover;
     background-repeat:no-repeat;
     background-position:center;
@@ -391,4 +390,24 @@ input, label, textarea {
 
 .zindex2 {
     z-index:600;
+}
+
+.transition {
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:-100%;
+    z-index:10000;
+}
+
+.trans1 {
+    background-color:#2C2C2C;
+}
+
+.trans2 {
+    background-color:#1E1E1E;
+}
+
+.trans3 {
+    background-color:#131313;
 }
