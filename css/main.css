@@ -369,8 +369,33 @@ ul {
 }
 
 /***CONTACT***/
+#contact_container {
+    z-index:655;
+    position:fixed;
+    height:100%;
+    width:100%;
+    background-color:#131313;
+}
+
+.contact_box {
+    text-align:left;
+    width:80%;
+}
+
 input, label, textarea {
     display:block;
+    border:unset;
+    background-color:unset;
+}
+
+.form_input_oneline, .contact_textarea {
+    border-bottom:1px solid white;
+    width:100%;
+    color:white;
+}
+
+.contact_textarea {
+    height:100px;
 }
 
 /**GOBACK**/

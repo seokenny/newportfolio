@@ -193,6 +193,15 @@ $(".m_nav_about").on('click',function(){
     $("#about_container").addClass("fadeIn");
 });
 
+$(".m_nav_contact").on('click',function(){
+    $(".m_nav_menu").toggleClass("hidden", 300);
+    $(".side_line_nav").fadeOut();
+    $(".m_nav_menu").removeClass("slideInRight");
+    $("#contact_container").removeClass("hidden");
+    $("#contact_container").removeClass("fadeOut");
+    $("#contact_container").addClass("fadeIn");
+});
+
 $(".full_burger_line").on('click',function(){
     $(".m_nav_menu").toggleClass("hidden");
     $(".m_nav_menu").addClass("slideInRight");
@@ -347,7 +356,7 @@ $(".rugsusa_circle").on('click',function(){
     console.log('asdas');
 });
 
-$(".m_nav_about, .m_nav_home").on("click",function(){
+$(".m_nav_about, .m_nav_home, .m_nav_contact").on("click",function(){
     $(".trans1").delay(100).animate({
         left:"100%"
     }, 2000, "easeOutExpo");
