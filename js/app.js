@@ -182,6 +182,9 @@ $(".m_nav_home").on('click',function(){
     $("#about_container").removeClass("fadeIn");
     $("#about_container").addClass("fadeOut");
     $("#about_container").addClass("hidden");
+    $("#contact_container").removeClass("fadeIn");
+    $("#contact_container").addClass("fadeOut");
+    $("#contact_container").addClass("hidden");
 });
 
 $(".m_nav_about").on('click',function(){
@@ -191,6 +194,9 @@ $(".m_nav_about").on('click',function(){
     $("#about_container").removeClass("hidden");
     $("#about_container").removeClass("fadeOut");
     $("#about_container").addClass("fadeIn");
+    $("#contact_container").removeClass("fadeIn");
+    $("#contact_container").addClass("fadeOut");
+    $("#contact_container").addClass("hidden");
 });
 
 $(".m_nav_contact").on('click',function(){
