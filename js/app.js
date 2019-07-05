@@ -134,44 +134,49 @@ $(".guesser_down_arrow").on('click',function(){
         'easeOutExpo');
 });
 
-$(".work_circle").on('click',function(){
+$(".work_circle, .work_company").on('click',function(){
     $(".go_back").fadeIn();
 });
 
 /**WORK CIRCLE**/
-$(".rugsusa_circle").on('click',function(){
+$(".rugsusa_circle, .rugsusa_company").on('click',function(){
     $(".rugsusa_circle").fadeOut();
     $(".side_line_nav").fadeOut();
     $(".swipe_overlay").fadeOut();
     $(".rugsusa_work_page").fadeIn();
+    $("#container").css("overflow","unset");
 });
 
-$(".fuyuramen_circle").on('click',function(){
+$(".fuyuramen_circle, .fuyuramen_company").on('click',function(){
     $(".fuyuramen_work_page").fadeIn();
     $(".side_line_nav").fadeOut();
     $(".swipe_overlay").fadeOut();
     $(".fuyuramen_circle").fadeOut();
+    $("#container").css("overflow","unset");
 });
 
-$(".mystic_circle").on('click',function(){
+$(".mystic_circle, .mystic_company").on('click',function(){
     $(".mystic_work_page").fadeIn();
     $(".side_line_nav").fadeOut();
     $(".swipe_overlay").fadeOut();
     $(".mystic_circle").fadeOut();
+    $("#container").css("overflow","unset");
 });
 
-$(".zombiedice_circle").on('click',function(){
+$(".zombiedice_circle, .zombiedice_company").on('click',function(){
     $(".zombiedice_work_page").fadeIn();
     $(".side_line_nav").fadeOut();
     $(".swipe_overlay").fadeOut();
     $(".zombiedice_circle").fadeOut();
+    $("#container").css("overflow","unset");
 });
 
-$(".guesser_circle").on('click',function(){
+$(".guesser_circle, .guesser_company").on('click',function(){
     $(".guesser_work_page").fadeIn();
     $(".side_line_nav").fadeOut();
     $(".swipe_overlay").fadeOut();
     $(".guesser_circle").fadeOut();
+    $("#container").css("overflow","unset");
 });
 
 /**NAVIGATION**/
@@ -209,8 +214,9 @@ $(".m_nav_contact").on('click',function(){
 });
 
 $(".full_burger_line").on('click',function(){
-    $(".m_nav_menu").toggleClass("hidden");
-    $(".m_nav_menu").addClass("slideInRight");
+        $(".m_nav_menu").toggleClass("hidden");
+        $(".m_nav_menu").removeClass("slideOutRight");
+        $(".m_nav_menu").addClass("slideInRight");
 });
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
