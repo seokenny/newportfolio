@@ -180,24 +180,10 @@ $(".guesser_circle, .guesser_company").on('click',function(){
 });
 
 /**NAVIGATION**/
-function mNavHome() {
+$(".m_nav_home").on('click',function(){
     $(".m_nav_menu").toggleClass("hidden", 300);
     $(".side_line_nav").fadeIn();
     $(".m_nav_menu").removeClass("slideInRight");
-    $("#about_container").removeClass("fadeIn");
-    $("#about_container").addClass("fadeOut");
-    $("#about_container").addClass("hidden");
-    $("#contact_container").removeClass("fadeIn");
-    $("#contact_container").addClass("fadeOut");
-    $("#contact_container").addClass("hidden");
-}
-
-$(".m_nav_home").on('click',function(){
-    
-});
-
-$(".desk_nav_home").on('click',function(){
-    $(".side_line_nav").fadeIn();
     $("#about_container").removeClass("fadeIn");
     $("#about_container").addClass("fadeOut");
     $("#about_container").addClass("hidden");
@@ -218,27 +204,10 @@ $(".m_nav_about").on('click',function(){
     $("#contact_container").addClass("hidden");
 });
 
-$(".desk_nav_about").on('click',function(){
-    $(".side_line_nav").fadeOut();
-    $("#about_container").removeClass("hidden");
-    $("#about_container").removeClass("fadeOut");
-    $("#about_container").addClass("fadeIn");
-    $("#contact_container").removeClass("fadeIn");
-    $("#contact_container").addClass("fadeOut");
-    $("#contact_container").addClass("hidden");
-});
-
 $(".m_nav_contact").on('click',function(){
     $(".m_nav_menu").toggleClass("hidden", 300);
     $(".side_line_nav").fadeOut();
     $(".m_nav_menu").removeClass("slideInRight");
-    $("#contact_container").removeClass("hidden");
-    $("#contact_container").removeClass("fadeOut");
-    $("#contact_container").addClass("fadeIn");
-});
-
-$(".desk_nav_contact").on('click',function(){
-    $(".side_line_nav").fadeOut();
     $("#contact_container").removeClass("hidden");
     $("#contact_container").removeClass("fadeOut");
     $("#contact_container").addClass("fadeIn");
@@ -399,16 +368,16 @@ $(".rugsusa_circle").on('click',function(){
     console.log('asdas');
 });
 
-$(".m_nav_about, .m_nav_home, .m_nav_contact, .desk_nav_home, .desk_nav_about, .desk_nav_contact").on("click",function(){
+$(".m_nav_about, .m_nav_home, .m_nav_contact").on("click",function(){
     $(".trans1").delay(100).animate({
-        left:"0%"
+        left:"100%"
     }, 2000, "easeOutExpo");
-    $(".trans2").delay(400).animate({
-        left:"0%"
+    $(".trans2").delay(200).animate({
+        left:"100%"
     }, 2000, "easeOutExpo");
-    $(".trans3").delay(700).animate({
-        left:"0%"
+    $(".trans3").delay(300).animate({
+        left:"100%"
     }, 2000, "easeOutExpo");
 
-    $(".transition").stop().delay(400).css("left","-100%");
+    $(".transition").delay(500).css("left","-100%");
 });
