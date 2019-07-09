@@ -171,6 +171,10 @@ ul {
     margin:20px 0;
 }
 
+.desk_nav_item {
+    padding:10px;
+}
+
 /**ABOUT ME**/
 #about_container {
     width:100%;
@@ -556,4 +560,8 @@ input, label, textarea {
     .work_company {
         font-size:144px;
     }
+}
+
+.social_button_git {
+    position:relative;
 }

@@ -408,3 +408,50 @@ $(".m_nav_about, .m_nav_home, .m_nav_contact, .desk_nav_home, .desk_nav_about, .
 
     $(".transition").stop().delay(350).css("left","-100%");
 });
+
+$(".desk_nav_about").on('click',function(){
+    console.log("sdasdsad");
+    if($(".trans2").css("left") !== "-100%"){
+        console.log('asd');
+    }
+    else console.log("mmm");
+});
+
+$(".desk_nav_home").on('mouseover',function(){
+    $(this).stop().animate({
+        backgroundColor: 'blue',
+        marginTop: '10px'
+    });
+});
+$(".desk_nav_home").on('mouseout',function(){
+    $(this).stop().animate({
+        backgroundColor: '#131313',
+        marginTop: '0px'
+    });
+});
+
+$(".desk_nav_about").on('mouseover',function(){
+    $(this).stop().animate({
+        backgroundColor: 'blue',
+        marginTop: '10px'
+    });
+});
+$(".desk_nav_about").on('mouseout',function(){
+    $(this).stop().animate({
+        backgroundColor: '#131313',
+        marginTop: '0px'
+    });
+});
+
+$(".desk_nav_contact").on('mouseover',function(){
+    $(this).stop().animate({
+        backgroundColor: 'blue',
+        marginTop: '10px'
+    });
+});
+$(".desk_nav_contact").on('mouseout',function(){
+    $(this).stop().animate({
+        backgroundColor: '#131313',
+        marginTop: '0px'
+    });
+});
