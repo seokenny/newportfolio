@@ -218,6 +218,7 @@ $(document).ready(function(){
     });
 
     $(".desk_nav_about").on('click',function(){
+        pageChange();
         $(".side_line_nav").fadeOut();
         $(".work_circle").fadeOut();
         $(".work_text").fadeOut();
@@ -404,19 +405,33 @@ $(document).ready(function(){
         console.log('asdas');
     });
 
-    $(".m_nav_about, .m_nav_home, .m_nav_contact, .desk_nav_home, .desk_nav_about, .desk_nav_contact").on("click",function(){
+function pageChange() {
+
         $(".trans1").stop().delay(100).animate({
-            left:"100%"
+            left:"0"
         }, "easeOutExpo");
         $(".trans2").stop().delay(200).animate({
-            left:"100%"
+            left:"0"
         }, "easeOutExpo");
         $(".trans3").stop().delay(300).animate({
-            left:"100%"
-        }, "easeOutExpo", function(){
-            $(".trans1, .trans2, .trans3").stop().css("left", "-100%");
-        });
-    });
+            left:"0"
+        }, "easeOutExpo");
+        $(".trans1, .trans2, .trans3").delay(450).fadeOut();
+  
+}
+
+    // $(".m_nav_about, .m_nav_home, .m_nav_contact, .desk_nav_home, .desk_nav_about, .desk_nav_contact").on("click",function(){
+    //     $(".trans1").stop().delay(100).animate({
+    //         left:"0"
+    //     }, "easeOutExpo");
+    //     $(".trans2").stop().delay(200).animate({
+    //         left:"0"
+    //     }, "easeOutExpo");
+    //     $(".trans3").stop().delay(300).animate({
+    //         left:"0"
+    //     }, "easeOutExpo");
+    //     $(".trans1, .trans2, .trans3").delay(450).fadeOut();
+    // });
 
     /**Navigation desktop slide down animation */
     // $(".desk_nav_home").on('mouseover',function(){

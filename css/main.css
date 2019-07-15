@@ -639,3 +639,7 @@ input, label, textarea {
   ::-webkit-scrollbar-track-piece {
     background:transparent;
   }
+
+  :focus {
+    outline: none !important;
+}
