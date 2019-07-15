@@ -195,6 +195,8 @@ $(document).ready(function(){
 
     $(".desk_nav_home").on('click',function(){
         $(".side_line_nav").fadeIn();
+        $(".work_circle").fadeIn();
+        $(".work_text").fadeIn();
         $("#about_container").removeClass("fadeIn");
         $("#about_container").addClass("fadeOut");
         $("#about_container").addClass("hidden");
@@ -217,12 +219,15 @@ $(document).ready(function(){
 
     $(".desk_nav_about").on('click',function(){
         $(".side_line_nav").fadeOut();
+        $(".work_circle").fadeOut();
+        $(".work_text").fadeOut();
         $("#about_container").removeClass("hidden");
         $("#about_container").removeClass("fadeOut");
         $("#about_container").addClass("fadeIn");
         $("#contact_container").removeClass("fadeIn");
         $("#contact_container").addClass("fadeOut");
-        $("#contact_container").addClass("hidden"); 
+        $("#contact_container").addClass("hidden");
+        goBackMenu();
     });
 
     $(".m_nav_contact").on('click',function(){
@@ -236,9 +241,12 @@ $(document).ready(function(){
 
     $(".desk_nav_contact").on('click',function(){
         $(".side_line_nav").fadeOut();
+        $(".work_circle").fadeOut();
+        $(".work_text").fadeOut();
         $("#contact_container").removeClass("hidden");
         $("#contact_container").removeClass("fadeOut");
         $("#contact_container").addClass("fadeIn");
+        goBackMenu();
     });
 
     $(".full_burger_line").on('click',function(){
@@ -399,25 +407,16 @@ $(document).ready(function(){
     $(".m_nav_about, .m_nav_home, .m_nav_contact, .desk_nav_home, .desk_nav_about, .desk_nav_contact").on("click",function(){
         $(".trans1").stop().delay(100).animate({
             left:"100%"
-        }, 2000, "easeOutExpo");
+        }, "easeOutExpo");
         $(".trans2").stop().delay(200).animate({
             left:"100%"
-        }, 2000, "easeOutExpo");
+        }, "easeOutExpo");
         $(".trans3").stop().delay(300).animate({
             left:"100%"
-        }, 2000, "easeOutExpo");
-
-        $(".transition").stop().delay(350).css("left","-100%");
+        }, "easeOutExpo", function(){
+            $(".trans1, .trans2, .trans3").stop().css("left", "-100%");
+        });
     });
-
-    $(".desk_nav_about").on('click',function(){
-        console.log("sdasdsad");
-        if($(".trans2").css("left") !== "-100%"){
-            console.log('asd');
-        }
-        else console.log("mmm");
-    });
-
 
     /**Navigation desktop slide down animation */
     // $(".desk_nav_home").on('mouseover',function(){
@@ -472,3 +471,50 @@ $(document).ready(function(){
             });
         });
 });
+
+$(".preventDef").on('click',function(){
+    event.preventDefault;
+});
+
+$(".go_back p").on('click',function(){
+    goBack();
+});
+
+function goBack() {
+    $("html, body").animate({
+        scrollTop: $(".m_work_page").offset().top
+    },750, 'easeOutExpo', function(){
+        $(".swipe_overlay").show();
+        $(".rugsusa_circle").fadeIn();
+        $(".fuyuramen_circle").fadeIn();
+        $(".mystic_circle").fadeIn();
+        $(".zombiedice_circle").fadeIn();
+        $(".guesser_circle").fadeIn();
+        $(".go_back").fadeOut();
+        $(".side_line_nav").fadeIn();
+        $(".rugsusa_work_page").fadeOut();
+        $(".fuyuramen_work_page").fadeOut();
+        $(".mystic_work_page").fadeOut();
+        $(".zombiedice_work_page").fadeOut();
+        $(".guesser_work_page").fadeOut();
+    });
+}
+
+function goBackMenu() {
+    $("html, body").animate({
+        scrollTop: $(".m_work_page").offset().top
+    },750, 'easeOutExpo', function(){
+        $(".swipe_overlay").show();
+        $(".rugsusa_circle").fadeIn();
+        $(".fuyuramen_circle").fadeIn();
+        $(".mystic_circle").fadeIn();
+        $(".zombiedice_circle").fadeIn();
+        $(".guesser_circle").fadeIn();
+        $(".go_back").fadeOut();
+        $(".rugsusa_work_page").fadeOut();
+        $(".fuyuramen_work_page").fadeOut();
+        $(".mystic_work_page").fadeOut();
+        $(".zombiedice_work_page").fadeOut();
+        $(".guesser_work_page").fadeOut();
+    });
+}

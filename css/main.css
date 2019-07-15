@@ -4,6 +4,10 @@
     font-family:'LemonMilk';
 }
 
+html {
+    overflow-y:scroll;
+}
+
 html, body {
     height:auto;
     min-height:100%;
@@ -143,6 +147,7 @@ ul {
 .desk_nav_menu li {
     margin: 0 20px;
     cursor:pointer;
+    z-index:20;
 }
 
 .desk_nav_menu li:hover {
@@ -606,3 +611,31 @@ input, label, textarea {
 .social_button_git {
     position:relative;
 }
+
+.preventDef {
+    height:100%;
+    width:100%;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #131313; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4B4B4B; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #BFBFBF; 
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background:transparent;
+  }
