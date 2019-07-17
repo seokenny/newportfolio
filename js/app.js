@@ -137,9 +137,7 @@ $(document).ready(function(){
 
     $(".work_circle, .work_company").on('click',function(){
         $(".go_back").fadeIn();
-        $(".social_list").animate({
-            backgroundColor: "black"
-        });
+        $(".social_list").fadeOut();
     });
 
     /**WORK CIRCLE**/
@@ -185,6 +183,7 @@ $(document).ready(function(){
 
     /**NAVIGATION**/
     $(".m_nav_home").on('click',function(){
+        goBackMenu();
             $(".m_nav_menu").toggleClass("hidden", 700);
             $(".side_line_nav").fadeIn();
             $(".m_nav_menu").removeClass("bounceInRight");
@@ -194,6 +193,7 @@ $(document).ready(function(){
     });
 
     $(".desk_nav_home").on('click',function(){
+        goBackMenu();
         $(".black_overlay").fadeIn(function(){
             $(".side_line_nav").fadeIn();
             $(".work_circle").fadeIn();
@@ -210,8 +210,9 @@ $(document).ready(function(){
     });
 
     $(".m_nav_about").on('click',function(){
+        goBackMenu();
         $(".m_nav_menu").toggleClass("hidden", 700);
-        $(".side_line_nav").fadeOut();
+        $(".side_line_nav").hide();
         $(".m_nav_menu").removeClass("bounceInRight");
         $(".m_nav_menu").addClass("bounceOutRight");
         $("#about_container").removeClass("hidden");
@@ -220,6 +221,7 @@ $(document).ready(function(){
 
     $(".desk_nav_about").on('click',function(){
         // pageChange();
+        goBackMenu();
         $(".black_overlay").fadeIn(function(){
             $(".side_line_nav").fadeOut();
             $(".work_circle").fadeOut();
@@ -237,14 +239,16 @@ $(document).ready(function(){
     });
 
     $(".m_nav_contact").on('click',function(){
+        goBackMenu();
         $(".m_nav_menu").toggleClass("hidden", 700);
-        $(".side_line_nav").fadeOut();
+        $(".side_line_nav").hide();
         $(".m_nav_menu").removeClass("bounceInRight");
         $(".m_nav_menu").addClass("bounceOutRight");
         $("#contact_container").removeClass("hidden");
     });
 
     $(".desk_nav_contact").on('click',function(){
+        goBackMenu();
         $(".black_overlay").fadeIn(function(){
             $(".side_line_nav").fadeOut();
             $(".work_circle").fadeOut();
@@ -508,6 +512,7 @@ $(".go_back p").on('click',function(){
 });
 
 function goBack() {
+    $(".go_back").hide();
     $("html, body").animate({
         scrollTop: $(".m_work_page").offset().top
     },750, 'easeOutExpo', function(){
@@ -524,6 +529,7 @@ function goBack() {
         $(".mystic_work_page").fadeOut();
         $(".zombiedice_work_page").fadeOut();
         $(".guesser_work_page").fadeOut();
+        $(".social_list").fadeIn();
     });
 }
 
@@ -543,6 +549,7 @@ function goBackMenu() {
         $(".mystic_work_page").fadeOut();
         $(".zombiedice_work_page").fadeOut();
         $(".guesser_work_page").fadeOut();
+        $(".social_list").fadeIn();
     });
 }
 
@@ -550,3 +557,16 @@ function fadeInner() {
     $(".cover").fadeIn(100);
     $(".cover").delay(300).fadeOut();
 }
+
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll code
+       console.log("down");
+   } else {
+      // upscroll code
+      console.log("up");
+   }
+   lastScrollTop = st;
+});
