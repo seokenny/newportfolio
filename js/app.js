@@ -137,6 +137,9 @@ $(document).ready(function(){
 
     $(".work_circle, .work_company").on('click',function(){
         $(".go_back").fadeIn();
+        $(".social_list").animate({
+            backgroundColor: "black"
+        });
     });
 
     /**WORK CIRCLE**/
