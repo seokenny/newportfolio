@@ -194,16 +194,19 @@ $(document).ready(function(){
     });
 
     $(".desk_nav_home").on('click',function(){
-        pageChange();
-        $(".side_line_nav").fadeIn();
-        $(".work_circle").fadeIn();
-        $(".work_text").fadeIn();
-        $("#about_container").removeClass("fadeIn");
-        $("#about_container").addClass("fadeOut");
-        $("#about_container").addClass("hidden");
-        $("#contact_container").removeClass("fadeIn");
-        $("#contact_container").addClass("fadeOut");
-        $("#contact_container").addClass("hidden");
+        $(".black_overlay").fadeIn(function(){
+            $(".side_line_nav").fadeIn();
+            $(".work_circle").fadeIn();
+            $(".work_text").fadeIn();
+            $("#about_container").removeClass("fadeIn");
+            $("#about_container").addClass("fadeOut");
+            $("#about_container").addClass("hidden");
+            $("#contact_container").removeClass("fadeIn");
+            $("#contact_container").addClass("fadeOut");
+            $("#contact_container").addClass("hidden",function(){
+                $(".black_overlay").delay(450).fadeOut();
+            });
+        });
     });
 
     $(".m_nav_about").on('click',function(){
@@ -221,16 +224,21 @@ $(document).ready(function(){
     });
 
     $(".desk_nav_about").on('click',function(){
-        pageChange();
-        $(".side_line_nav").fadeOut();
-        $(".work_circle").fadeOut();
-        $(".work_text").fadeOut();
-        $("#about_container").removeClass("hidden");
-        $("#about_container").removeClass("fadeOut");
-        $("#about_container").addClass("fadeIn");
-        $("#contact_container").removeClass("fadeIn");
-        $("#contact_container").addClass("fadeOut");
-        $("#contact_container").addClass("hidden");
+        // pageChange();
+        $(".black_overlay").fadeIn(function(){
+            $(".side_line_nav").fadeOut();
+            $(".work_circle").fadeOut();
+            $(".work_text").fadeOut();
+            $("#about_container").removeClass("hidden");
+            $("#about_container").removeClass("fadeOut");
+            $("#about_container").addClass("fadeIn");
+            $("#contact_container").removeClass("fadeIn");
+            $("#contact_container").addClass("fadeOut");
+            $("#contact_container").addClass("hidden",function(){
+                $(".black_overlay").delay(450).fadeOut();
+            });
+        });
+
     });
 
     $(".m_nav_contact").on('click',function(){
@@ -243,13 +251,19 @@ $(document).ready(function(){
     });
 
     $(".desk_nav_contact").on('click',function(){
-        $(".side_line_nav").fadeOut();
-        $(".work_circle").fadeOut();
-        $(".work_text").fadeOut();
-        $("#contact_container").removeClass("hidden");
-        $("#contact_container").removeClass("fadeOut");
-        $("#contact_container").addClass("fadeIn");
-        goBackMenu();
+        $(".black_overlay").fadeIn(function(){
+            $(".side_line_nav").fadeOut();
+            $(".work_circle").fadeOut();
+            $(".work_text").fadeOut();
+            $("#about_container").removeClass("fadeIn");
+            $("#about_container").addClass("fadeOut");
+            $("#about_container").addClass("hidden");
+            $("#contact_container").removeClass("hidden");
+            $("#contact_container").removeClass("fadeOut");
+            $("#contact_container").addClass("fadeIn",function(){
+                $(".black_overlay").delay(450).fadeOut();
+            });
+        });
     });
 
     $(".full_burger_line").on('click',function(){
