@@ -194,6 +194,7 @@ $(document).ready(function(){
     });
 
     $(".desk_nav_home").on('click',function(){
+        pageChange();
         $(".side_line_nav").fadeIn();
         $(".work_circle").fadeIn();
         $(".work_text").fadeIn();
@@ -209,7 +210,9 @@ $(document).ready(function(){
         $(".m_nav_menu").toggleClass("hidden", 300);
         $(".side_line_nav").fadeOut();
         $(".m_nav_menu").removeClass("slideInRight");
-        $("#about_container").removeClass("hidden");
+        $("#about_container").removeClass("hidden",function(){
+            $("#about_container").css("display","none");
+        });
         $("#about_container").removeClass("fadeOut");
         $("#about_container").addClass("fadeIn");
         $("#contact_container").removeClass("fadeIn");
@@ -228,7 +231,6 @@ $(document).ready(function(){
         $("#contact_container").removeClass("fadeIn");
         $("#contact_container").addClass("fadeOut");
         $("#contact_container").addClass("hidden");
-        goBackMenu();
     });
 
     $(".m_nav_contact").on('click',function(){
@@ -416,7 +418,9 @@ function pageChange() {
         $(".trans3").stop().delay(300).animate({
             left:"0"
         }, "easeOutExpo");
-        $(".trans1, .trans2, .trans3").delay(450).fadeOut();
+        $(".trans1, .trans2, .trans3").delay(450).fadeOut(function(){
+            $(".trans1, .trans2, .trans3").css('left','-100%').fadeIn();
+        });
   
 }
 
@@ -532,4 +536,9 @@ function goBackMenu() {
         $(".zombiedice_work_page").fadeOut();
         $(".guesser_work_page").fadeOut();
     });
+}
+
+function fadeInner() {
+    $(".cover").fadeIn(100);
+    $(".cover").delay(300).fadeOut();
 }
