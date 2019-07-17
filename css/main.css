@@ -217,35 +217,35 @@ ul {
 }
 
 .rugsusa_circle {
-    background-image:url('../images/rugsbanner.jpg');
+    background-image:url('../images/rugsbannersmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-color:#D02424;
 }
 
 .fuyuramen_circle {
-    background-image:url('../images/fuyubanner.jpg');
+    background-image:url('../images/fuyubannersmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-color:#FFA53C;
 }
 
 .mystic_circle {
-    background-image:url('../images/mystiqbanner.jpg');
+    background-image:url('../images/mystiqbannersmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-color:#2556D4;
 }
 
 .zombiedice_circle {
-    background-image:url('../images/zombiebanner.jpg');
+    background-image:url('../images/zombiebannersmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-color:#19BE6F;
 }
 
 .guesser_circle {
-    background-image:url('../images/guesserbanner.jpg');
+    background-image:url('../images/guesserbannersmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-color:#9319BE;
@@ -261,6 +261,7 @@ ul {
     font-size:12vw;
     display:inline-block;
     cursor:pointer;
+    line-height:10.5vw;
 }
 
 .work_position {
@@ -520,6 +521,9 @@ input, label, textarea {
     background-color:#131313;
 }
 
+.line_skip {
+    display:block;
+}
 
 /**MEDIA QUERIES**/
 @media only screen and (min-width:696px){
@@ -528,6 +532,12 @@ input, label, textarea {
     }
     .contact_box {
         width:560px;
+    }
+}
+
+@media only screen and (min-width:780px){
+    .line_skip {
+        display:unset;
     }
 }
 

@@ -182,15 +182,12 @@ $(document).ready(function(){
 
     /**NAVIGATION**/
     $(".m_nav_home").on('click',function(){
-        $(".m_nav_menu").toggleClass("hidden", 300);
-        $(".side_line_nav").fadeIn();
-        $(".m_nav_menu").removeClass("slideInRight");
-        $("#about_container").removeClass("fadeIn");
-        $("#about_container").addClass("fadeOut");
-        $("#about_container").addClass("hidden");
-        $("#contact_container").removeClass("fadeIn");
-        $("#contact_container").addClass("fadeOut");
-        $("#contact_container").addClass("hidden");
+            $(".m_nav_menu").toggleClass("hidden", 700);
+            $(".side_line_nav").fadeIn();
+            $(".m_nav_menu").removeClass("bounceInRight");
+            $(".m_nav_menu").addClass("bounceOutRight");
+            $("#about_container").addClass("hidden");
+            $("#contact_container").addClass("hidden");
     });
 
     $(".desk_nav_home").on('click',function(){
@@ -210,16 +207,11 @@ $(document).ready(function(){
     });
 
     $(".m_nav_about").on('click',function(){
-        $(".m_nav_menu").toggleClass("hidden", 300);
+        $(".m_nav_menu").toggleClass("hidden", 700);
         $(".side_line_nav").fadeOut();
-        $(".m_nav_menu").removeClass("slideInRight");
-        $("#about_container").removeClass("hidden",function(){
-            $("#about_container").css("display","none");
-        });
-        $("#about_container").removeClass("fadeOut");
-        $("#about_container").addClass("fadeIn");
-        $("#contact_container").removeClass("fadeIn");
-        $("#contact_container").addClass("fadeOut");
+        $(".m_nav_menu").removeClass("bounceInRight");
+        $(".m_nav_menu").addClass("bounceOutRight");
+        $("#about_container").removeClass("hidden");
         $("#contact_container").addClass("hidden");
     });
 
@@ -242,12 +234,11 @@ $(document).ready(function(){
     });
 
     $(".m_nav_contact").on('click',function(){
-        $(".m_nav_menu").toggleClass("hidden", 300);
+        $(".m_nav_menu").toggleClass("hidden", 700);
         $(".side_line_nav").fadeOut();
-        $(".m_nav_menu").removeClass("slideInRight");
+        $(".m_nav_menu").removeClass("bounceInRight");
+        $(".m_nav_menu").addClass("bounceOutRight");
         $("#contact_container").removeClass("hidden");
-        $("#contact_container").removeClass("fadeOut");
-        $("#contact_container").addClass("fadeIn");
     });
 
     $(".desk_nav_contact").on('click',function(){
@@ -268,8 +259,8 @@ $(document).ready(function(){
 
     $(".full_burger_line").on('click',function(){
             $(".m_nav_menu").toggleClass("hidden");
-            $(".m_nav_menu").removeClass("slideOutRight");
-            $(".m_nav_menu").addClass("slideInRight");
+            $(".m_nav_menu").removeClass("bounceOutRight");
+            $(".m_nav_menu").addClass("bounceInRight");
     });
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
