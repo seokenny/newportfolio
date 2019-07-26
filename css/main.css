@@ -125,7 +125,7 @@ ul {
     margin:5px 0 5px 0;
 }
 
-.burger_line_0 {width:30px;}
+.burger_line_0, .burger_line_3, .burger_line_4 {width:30px;}
 .burger_line_1 {width:20px; margin-left:10px;}
 .burger_line_2 {width:10px; margin-left:20px;}
 
@@ -667,4 +667,8 @@ input, label, textarea {
     background-color:#131313;
     position:fixed;
     z-index:700;
+}
+
+.whiteText {
+    color:white;
 }

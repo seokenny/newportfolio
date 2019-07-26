@@ -186,6 +186,7 @@ $(document).ready(function(){
     /**NAVIGATION**/
     $(".m_nav_home").on('click',function(){
         goBackMenu();
+        whiteTextHome();
         $(".black_overlay").fadeIn(function(){
             $(".m_nav_menu").toggleClass("hidden", 700);
             $(".side_line_nav").fadeIn();
@@ -200,6 +201,7 @@ $(document).ready(function(){
 
     $(".desk_nav_home").on('click',function(){
         goBackMenu();
+        whiteTextHome();
         $(".black_overlay").fadeIn(function(){
             $(".side_line_nav").fadeIn();
             $(".work_circle").fadeIn();
@@ -217,6 +219,7 @@ $(document).ready(function(){
 
     $(".m_nav_about").on('click',function(){
         goBackMenu();
+        whiteTextAbout();
         $(".black_overlay").fadeIn(function(){
             $(".m_nav_menu").toggleClass("hidden", 700);
             $(".side_line_nav").hide();
@@ -236,6 +239,7 @@ $(document).ready(function(){
     $(".desk_nav_about").on('click',function(){
         // pageChange();
         goBackMenu();
+        whiteTextAbout();
         $(".black_overlay").fadeIn(function(){
             $(".side_line_nav").fadeOut();
             $(".work_circle").fadeOut();
@@ -254,6 +258,7 @@ $(document).ready(function(){
 
     $(".m_nav_contact").on('click',function(){
         goBackMenu();
+        whiteTextContact();
         $(".black_overlay").fadeIn(function(){
             $(".m_nav_menu").toggleClass("hidden", 700);
             $(".side_line_nav").hide();
@@ -272,6 +277,7 @@ $(document).ready(function(){
 
     $(".desk_nav_contact").on('click',function(){
         goBackMenu();
+        whiteTextContact();
         $(".black_overlay").fadeIn(function(){
             $(".side_line_nav").fadeOut();
             $(".work_circle").fadeOut();
@@ -288,10 +294,34 @@ $(document).ready(function(){
     });
 
     $(".full_burger_line").on('click',function(){
-            $(".m_nav_menu").toggleClass("hidden");
+        if($(".m_nav_menu").hasClass("bounceInRight")){
+            $(".m_nav_menu").removeClass("bounceInRight");
+            $(".m_nav_menu").addClass("bounceOutRight");
+        }
+        else {
+            $(".m_nav_menu").removeClass("hidden");
             $(".m_nav_menu").removeClass("bounceOutRight");
             $(".m_nav_menu").addClass("bounceInRight");
+        }
     });
+
+    function whiteTextHome() {
+        $(".desk_nav_home").addClass("whiteText");
+        $(".desk_nav_about").removeClass("whiteText");
+        $(".desk_nav_contact").removeClass("whiteText");
+    }
+
+    function whiteTextAbout() {
+        $(".desk_nav_home").removeClass("whiteText");
+        $(".desk_nav_about").addClass("whiteText");
+        $(".desk_nav_contact").removeClass("whiteText");
+    }
+
+    function whiteTextContact() {
+        $(".desk_nav_home").removeClass("whiteText");
+        $(".desk_nav_about").removeClass("whiteText");
+        $(".desk_nav_contact").addClass("whiteText");
+    }
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -763,3 +793,17 @@ function fadeInner() {
     $(".cover").fadeIn(100);
     $(".cover").delay(300).fadeOut();
 }
+
+$(".code_link").stop().on("mouseover",function(){
+    $(this).stop().animate({
+        backgroundColor: 'white',
+        color: 'black'
+    });
+});
+
+$(".code_link").stop().on("mouseout",function(){
+    $(this).stop().animate({
+        backgroundColor: '#131313',
+        color: 'white'
+    });
+});
