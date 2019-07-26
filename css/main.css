@@ -531,6 +531,7 @@ input, label, textarea {
     display:block;
 }
 
+
 /**MEDIA QUERIES**/
 @media only screen and (min-width:696px){
     .about_text_contain p {
@@ -574,9 +575,9 @@ input, label, textarea {
     .burger_line {
         background-color:unset;
     }
-    .swipe_overlay {
+    /* .swipe_overlay {
         display:none !important;
-    }
+    } */
     .work_company {
         font-size:12vw;
         letter-spacing:unset;
