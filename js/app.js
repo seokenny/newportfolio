@@ -360,91 +360,7 @@ $(document).ready(function(){
         }
     });
 
-    /**FUNCTIONS**/
-    function rugsusaSideLine(){
-        $(".side_line_0").animate({
-            width:40,
-            backgroundColor: "#D02424"
-        });
-        document.querySelector(".side_line_0").classList.add("currentLine");
-        for(var i = 0; i < 5; i++){
-            if(i !== 0){
-                $(".side_line_" + i).animate({
-                    width:20,
-                    backgroundColor:'white'
-                });
-                document.querySelector(".side_line_" + i).classList.remove("currentLine");
-            }
-        }
-    }
-
-    function fuyuramenSideLine(){
-        $(".side_line_1").animate({
-            width:40,
-            backgroundColor: '#FFA53C'
-        });
-        document.querySelector(".side_line_1").classList.add("currentLine");
-        for(var i = 0; i < 5; i++){
-            if(i !== 1){
-                $(".side_line_" + i).animate({
-                    width:20,
-                    backgroundColor:'white'
-                });
-                document.querySelector(".side_line_" + i).classList.remove("currentLine");
-            }
-        }
-    }
-
-    function mysticSideLine(){
-        $(".side_line_2").animate({
-            width:40,
-            backgroundColor:'#2556D4'
-        });
-        document.querySelector(".side_line_2").classList.add("currentLine");
-        for(var i = 0; i < 5; i++){
-            if(i !== 2){
-                $(".side_line_" + i).animate({
-                    width:20,
-                    backgroundColor:'white'
-                });
-                document.querySelector(".side_line_" + i).classList.remove("currentLine");
-            }
-        }
-    }
-
-    function zombieSideLine(){
-        $(".side_line_3").animate({
-            width:40,
-            backgroundColor:'#19BE6F'
-        });
-        document.querySelector(".side_line_3").classList.add("currentLine");
-        for(var i = 0; i < 5; i++){
-            if(i !== 3){
-                $(".side_line_" + i).animate({
-                    width:20,
-                    backgroundColor:'white'
-                });
-                document.querySelector(".side_line_" + i).classList.remove("currentLine");
-            }
-        }
-    }
-
-    function guesserSideLine(){
-        $(".side_line_4").animate({
-            width:40,
-            backgroundColor:'#9319BE'
-        });
-        document.querySelector(".side_line_4").classList.add("currentLine");
-        for(var i = 0; i < 5; i++){
-            if(i !== 4){
-                $(".side_line_" + i).animate({
-                    width:20,
-                    backgroundColor:'white'
-                });
-                document.querySelector(".side_line_" + i).classList.remove("currentLine");
-            }
-        }
-    }
+    
 
     $(".rugsusa_circle").on('click',function(){
         console.log('asdas');
@@ -542,53 +458,6 @@ $(".go_back p").on('click',function(){
     goBack();
 });
 
-function goBack() {
-    $(".go_back").hide();
-    $("html, body").animate({
-        scrollTop: $(".m_work_page").offset().top
-    },750, 'easeOutExpo', function(){
-        $(".swipe_overlay").show();
-        $(".rugsusa_circle").fadeIn();
-        $(".fuyuramen_circle").fadeIn();
-        $(".mystic_circle").fadeIn();
-        $(".zombiedice_circle").fadeIn();
-        $(".guesser_circle").fadeIn();
-        $(".go_back").fadeOut();
-        $(".side_line_nav").fadeIn();
-        $(".rugsusa_work_page").fadeOut();
-        $(".fuyuramen_work_page").fadeOut();
-        $(".mystic_work_page").fadeOut();
-        $(".zombiedice_work_page").fadeOut();
-        $(".guesser_work_page").fadeOut();
-        $(".social_list").fadeIn();
-    });
-}
-
-function goBackMenu() {
-    $("html, body").animate({
-        scrollTop: $(".m_work_page").offset().top
-    },750, 'easeOutExpo', function(){
-        $(".swipe_overlay").show();
-        $(".rugsusa_circle").fadeIn();
-        $(".fuyuramen_circle").fadeIn();
-        $(".mystic_circle").fadeIn();
-        $(".zombiedice_circle").fadeIn();
-        $(".guesser_circle").fadeIn();
-        $(".go_back").fadeOut();
-        $(".rugsusa_work_page").fadeOut();
-        $(".fuyuramen_work_page").fadeOut();
-        $(".mystic_work_page").fadeOut();
-        $(".zombiedice_work_page").fadeOut();
-        $(".guesser_work_page").fadeOut();
-        $(".social_list").fadeIn();
-    });
-}
-
-function fadeInner() {
-    $(".cover").fadeIn(100);
-    $(".cover").delay(300).fadeOut();
-}
-
 var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
@@ -608,13 +477,148 @@ $(window).scroll(function(event){
 window.addEventListener('wheel', function(e) {
     if (e.deltaY < 0) {
       console.log('scrolling up');
-      document.getElementById('status').innerHTML = 'scrolling up';
+      if($(".side_line_1").hasClass("currentLine")){
+          console.log('asd');
+          $(".fuyu_wc_main").fadeOut(function(){
+            $(".rugs_wc_main").fadeIn();
+            rugsusaSideLine();
+        });
+      }
+      else if ($(".side_line_2").hasClass("currentLine")){
+          $(".mystic_wc_main").fadeOut(function(){
+            $(".fuyu_wc_main").fadeIn();
+            fuyuramenSideLine();
+          });
+      }
+      else if ($(".side_line_3").hasClass("currentLine")){
+          $(".zombie_wc_main").fadeOut(function(){
+              $(".mystic_wc_main").fadeIn();
+              mysticSideLine();
+          });
+      }
+      else if ($(".side_line_4").hasClass("currentLine")){
+          $(".guesser_wc_main").fadeOut(function(){
+              $(".zombie_wc_main").fadeIn();
+              zombieSideLine();
+          });
+      }
     }
     if (e.deltaY > 0) {
       console.log('scrolling down');
-      document.getElementById('status').innerHTML = 'scrolling down';
+      if($(".side_line_0").hasClass("currentLine")){
+        console.log('asd');
+        $(".rugs_wc_main").fadeOut(function(){
+          $(".fuyu_wc_main").fadeIn();
+          fuyuramenSideLine();
+      });
+    }
+    else if ($(".side_line_1").hasClass("currentLine")){
+        $(".fuyu_wc_main").fadeOut(function(){
+          $(".mystic_wc_main").fadeIn();
+          mysticSideLine();
+        });
+    }
+    else if ($(".side_line_2").hasClass("currentLine")){
+        $(".mystic_wc_main").fadeOut(function(){
+            $(".zombie_wc_main").fadeIn();
+            zombieSideLine();
+        });
+    }
+    else if ($(".side_line_3").hasClass("currentLine")){
+        $(".zombie_wc_main").fadeOut(function(){
+            $(".guesser_wc_main").fadeIn();
+            guesserSideLine();
+        });
+    }
     }
   });
+
+/**FUNCTIONS**/
+function rugsusaSideLine(){
+    $(".side_line_0").animate({
+        width:40,
+        backgroundColor: "#D02424"
+    });
+    document.querySelector(".side_line_0").classList.add("currentLine");
+    for(var i = 0; i < 5; i++){
+        if(i !== 0){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+            document.querySelector(".side_line_" + i).classList.remove("currentLine");
+        }
+    }
+}
+
+function fuyuramenSideLine(){
+    $(".side_line_1").animate({
+        width:40,
+        backgroundColor: '#FFA53C'
+    });
+    document.querySelector(".side_line_1").classList.add("currentLine");
+    for(var i = 0; i < 5; i++){
+        if(i !== 1){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+            document.querySelector(".side_line_" + i).classList.remove("currentLine");
+        }
+    }
+}
+
+function mysticSideLine(){
+    $(".side_line_2").animate({
+        width:40,
+        backgroundColor:'#2556D4'
+    });
+    document.querySelector(".side_line_2").classList.add("currentLine");
+    for(var i = 0; i < 5; i++){
+        if(i !== 2){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+            document.querySelector(".side_line_" + i).classList.remove("currentLine");
+        }
+    }
+}
+
+function zombieSideLine(){
+    $(".side_line_3").animate({
+        width:40,
+        backgroundColor:'#19BE6F'
+    });
+    document.querySelector(".side_line_3").classList.add("currentLine");
+    for(var i = 0; i < 5; i++){
+        if(i !== 3){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+            document.querySelector(".side_line_" + i).classList.remove("currentLine");
+        }
+    }
+}
+
+function guesserSideLine(){
+    $(".side_line_4").animate({
+        width:40,
+        backgroundColor:'#9319BE'
+    });
+    document.querySelector(".side_line_4").classList.add("currentLine");
+    for(var i = 0; i < 5; i++){
+        if(i !== 4){
+            $(".side_line_" + i).animate({
+                width:20,
+                backgroundColor:'white'
+            });
+            document.querySelector(".side_line_" + i).classList.remove("currentLine");
+        }
+    }
+}
+
 
 function sideLine0() {
     $(".side_line_0").on('click',function(){
@@ -705,4 +709,51 @@ function sideLine4() {
         });
         guesserSideLine();
         });
+}
+
+function goBack() {
+    $(".go_back").hide();
+    $("html, body").animate({
+        scrollTop: $(".m_work_page").offset().top
+    },750, 'easeOutExpo', function(){
+        $(".swipe_overlay").show();
+        $(".rugsusa_circle").fadeIn();
+        $(".fuyuramen_circle").fadeIn();
+        $(".mystic_circle").fadeIn();
+        $(".zombiedice_circle").fadeIn();
+        $(".guesser_circle").fadeIn();
+        $(".go_back").fadeOut();
+        $(".side_line_nav").fadeIn();
+        $(".rugsusa_work_page").fadeOut();
+        $(".fuyuramen_work_page").fadeOut();
+        $(".mystic_work_page").fadeOut();
+        $(".zombiedice_work_page").fadeOut();
+        $(".guesser_work_page").fadeOut();
+        $(".social_list").fadeIn();
+    });
+}
+
+function goBackMenu() {
+    $("html, body").animate({
+        scrollTop: $(".m_work_page").offset().top
+    },750, 'easeOutExpo', function(){
+        $(".swipe_overlay").show();
+        $(".rugsusa_circle").fadeIn();
+        $(".fuyuramen_circle").fadeIn();
+        $(".mystic_circle").fadeIn();
+        $(".zombiedice_circle").fadeIn();
+        $(".guesser_circle").fadeIn();
+        $(".go_back").fadeOut();
+        $(".rugsusa_work_page").fadeOut();
+        $(".fuyuramen_work_page").fadeOut();
+        $(".mystic_work_page").fadeOut();
+        $(".zombiedice_work_page").fadeOut();
+        $(".guesser_work_page").fadeOut();
+        $(".social_list").fadeIn();
+    });
+}
+
+function fadeInner() {
+    $(".cover").fadeIn(100);
+    $(".cover").delay(300).fadeOut();
 }
