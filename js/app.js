@@ -138,6 +138,8 @@ $(document).ready(function(){
     $(".work_circle, .work_company").on('click',function(){
         $(".go_back").fadeIn();
         $(".social_list").fadeOut();
+        $(".swipe_overlay").hide();
+        $(".swipe_overlay").removeClass("activeOverlay");
     });
 
     /**WORK CIRCLE**/
@@ -475,61 +477,63 @@ $(window).scroll(function(event){
 // });
 
 window.addEventListener('wheel', function(e) {
-    if (e.deltaY < 0) {
-      console.log('scrolling up');
-      if($(".side_line_1").hasClass("currentLine")){
-          console.log('asd');
-          $(".fuyu_wc_main").fadeOut(function(){
-            $(".rugs_wc_main").fadeIn();
-            rugsusaSideLine();
-        });
-      }
-      else if ($(".side_line_2").hasClass("currentLine")){
-          $(".mystic_wc_main").fadeOut(function(){
-            $(".fuyu_wc_main").fadeIn();
-            fuyuramenSideLine();
-          });
-      }
-      else if ($(".side_line_3").hasClass("currentLine")){
-          $(".zombie_wc_main").fadeOut(function(){
-              $(".mystic_wc_main").fadeIn();
-              mysticSideLine();
-          });
-      }
-      else if ($(".side_line_4").hasClass("currentLine")){
-          $(".guesser_wc_main").fadeOut(function(){
-              $(".zombie_wc_main").fadeIn();
-              zombieSideLine();
-          });
-      }
-    }
-    if (e.deltaY > 0) {
-      console.log('scrolling down');
-      if($(".side_line_0").hasClass("currentLine")){
-        console.log('asd');
-        $(".rugs_wc_main").fadeOut(function(){
-          $(".fuyu_wc_main").fadeIn();
-          fuyuramenSideLine();
-      });
-    }
-    else if ($(".side_line_1").hasClass("currentLine")){
-        $(".fuyu_wc_main").fadeOut(function(){
-          $(".mystic_wc_main").fadeIn();
-          mysticSideLine();
-        });
-    }
-    else if ($(".side_line_2").hasClass("currentLine")){
-        $(".mystic_wc_main").fadeOut(function(){
-            $(".zombie_wc_main").fadeIn();
-            zombieSideLine();
-        });
-    }
-    else if ($(".side_line_3").hasClass("currentLine")){
-        $(".zombie_wc_main").fadeOut(function(){
-            $(".guesser_wc_main").fadeIn();
-            guesserSideLine();
-        });
-    }
+    if($(".swipe_overlay").hasClass("activeOverlay")){
+        if (e.deltaY < 0) {
+            console.log('scrolling up');
+            if($(".side_line_1").hasClass("currentLine")){
+                console.log('asd');
+                $(".fuyu_wc_main").fadeOut(function(){
+                  $(".rugs_wc_main").fadeIn();
+                  rugsusaSideLine();
+              });
+            }
+            else if ($(".side_line_2").hasClass("currentLine")){
+                $(".mystic_wc_main").fadeOut(function(){
+                  $(".fuyu_wc_main").fadeIn();
+                  fuyuramenSideLine();
+                });
+            }
+            else if ($(".side_line_3").hasClass("currentLine")){
+                $(".zombie_wc_main").fadeOut(function(){
+                    $(".mystic_wc_main").fadeIn();
+                    mysticSideLine();
+                });
+            }
+            else if ($(".side_line_4").hasClass("currentLine")){
+                $(".guesser_wc_main").fadeOut(function(){
+                    $(".zombie_wc_main").fadeIn();
+                    zombieSideLine();
+                });
+            }
+          }
+          if (e.deltaY > 0) {
+            console.log('scrolling down');
+            if($(".side_line_0").hasClass("currentLine")){
+              console.log('asd');
+              $(".rugs_wc_main").fadeOut(function(){
+                $(".fuyu_wc_main").fadeIn();
+                fuyuramenSideLine();
+            });
+          }
+          else if ($(".side_line_1").hasClass("currentLine")){
+              $(".fuyu_wc_main").fadeOut(function(){
+                $(".mystic_wc_main").fadeIn();
+                mysticSideLine();
+              });
+          }
+          else if ($(".side_line_2").hasClass("currentLine")){
+              $(".mystic_wc_main").fadeOut(function(){
+                  $(".zombie_wc_main").fadeIn();
+                  zombieSideLine();
+              });
+          }
+          else if ($(".side_line_3").hasClass("currentLine")){
+              $(".zombie_wc_main").fadeOut(function(){
+                  $(".guesser_wc_main").fadeIn();
+                  guesserSideLine();
+              });
+          }
+          }
     }
   });
 
@@ -730,6 +734,8 @@ function goBack() {
         $(".zombiedice_work_page").fadeOut();
         $(".guesser_work_page").fadeOut();
         $(".social_list").fadeIn();
+        $(".swipe_overlay").show();
+        $(".swipe_overlay").addClass("activeOverlay");
     });
 }
 
