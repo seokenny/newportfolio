@@ -375,8 +375,10 @@ ul {
 
 .work_images {
     width:100%;
-    height:200px;
-    background-color:#D02424;
+}
+
+.work_images_img {
+    width:100%;
 }
 
 /**FOOTER**/
