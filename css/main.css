@@ -72,6 +72,7 @@ ul {
     top:unset;
     overflow:hidden;
     cursor:pointer;
+    width:unset;
 }
 
 /**NAVIGATION**/
@@ -399,6 +400,9 @@ ul {
     padding-top:10px;
     padding-bottom:10px;
     color:gray;
+}
+
+.social_list li {
     cursor:pointer;
 }
 

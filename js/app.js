@@ -140,6 +140,9 @@ $(document).ready(function(){
         $(".social_list").fadeOut();
         $(".swipe_overlay").hide();
         $(".swipe_overlay").removeClass("activeOverlay");
+        $(".desk_nav_item").css({
+            opacity: 0
+        });
     });
 
     /**WORK CIRCLE**/
@@ -766,6 +769,9 @@ function goBack() {
         $(".social_list").fadeIn();
         $(".swipe_overlay").show();
         $(".swipe_overlay").addClass("activeOverlay");
+        $(".desk_nav_item").css({
+            opacity: 100
+        })
     });
 }
 
