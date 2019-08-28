@@ -156,10 +156,6 @@ ul {
     z-index:20;
 }
 
-.desk_nav_menu li:hover {
-    color:white;
-}
-
 .m_nav_menu {
     background-color:#131313;
     width:100%;
@@ -409,10 +405,6 @@ ul {
 
 .social_list li {
     cursor:pointer;
-}
-
-.social_list li:hover {
-    color:white;
 }
 
 @font-face {
@@ -681,5 +673,5 @@ input, label, textarea {
 }
 
 .whiteText {
-    color:white;
+    color:white !important;
 }

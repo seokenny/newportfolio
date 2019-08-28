@@ -933,3 +933,75 @@ $(".code_link").stop().on("mouseout",function(){
         color: 'white'
     });
 });
+
+$(".linkedin_li").on("mouseover",function(){
+    $(".linkedin_li").stop().animate({
+        color: 'white'
+    },250);
+});
+
+$(".linkedin_li").on("mouseout",function(){
+    $(".linkedin_li").stop().animate({
+        color: 'gray'
+    },250);
+});
+
+$(".github_li").on("mouseover",function(){
+    $(".github_li").stop().animate({
+        color: 'white'
+    },250);
+});
+
+$(".github_li").on("mouseout",function(){
+    $(".github_li").stop().animate({
+        color: 'gray'
+    },250);
+});
+
+$(".resume_li").on("mouseover",function(){
+    $(".resume_li").stop().animate({
+        color: 'white'
+    },250);
+});
+
+$(".resume_li").on("mouseout",function(){
+    $(".resume_li").stop().animate({
+        color: 'gray'
+    },250);
+});
+
+$(".desk_nav_home").on("mouseover",function(){
+    $(".desk_nav_home").stop().animate({
+        color: 'white'
+    },250);
+});
+
+$(".desk_nav_home").on("mouseout",function(){
+    $(".desk_nav_home").stop().animate({
+        color: 'gray'
+    },250);
+});
+
+$(".desk_nav_about").on("mouseover",function(){
+    $(".desk_nav_about").stop().animate({
+        color: 'white'
+    },250);
+});
+
+$(".desk_nav_about").on("mouseout",function(){
+    $(".desk_nav_about").stop().animate({
+        color: 'gray'
+    },250);
+});
+
+$(".desk_nav_contact").on("mouseover",function(){
+    $(".desk_nav_contact").stop().animate({
+        color: 'white'
+    },250);
+});
+
+$(".desk_nav_contact").on("mouseout",function(){
+    $(".desk_nav_contact").stop().animate({
+        color: 'gray'
+    },250);
+});
