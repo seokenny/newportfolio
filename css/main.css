@@ -225,38 +225,39 @@ ul {
 }
 
 .rugsusa_circle {
-    background-image:url('../images/rugsbannersmall.jpg');
+    background-image:url('../images/rugsbannernewsmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#D02424;
+}
+
+.konditori_circle {
+    background-image:url('../images/konditoribannersm.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 .fuyuramen_circle {
-    background-image:url('../images/fuyubannersmall.jpg');
+    background-image:url('../images/fuyubannernewsmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#FFA53C;
 }
 
 .mystic_circle {
-    background-image:url('../images/mystiqbannersmall.jpg');
+    background-image:url('../images/mysticbannernewsmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#2556D4;
 }
 
 .zombiedice_circle {
-    background-image:url('../images/zombiebannersmall.jpg');
+    background-image:url('../images/zombiebannernewsmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#19BE6F;
 }
 
 .guesser_circle {
-    background-image:url('../images/guesserbannersmall.jpg');
+    background-image:url('../images/guesserbannernewsmall.jpg');
     background-repeat:no-repeat;
     background-size:cover;
-    background-color:#9319BE;
 }
 
 .work_text {
@@ -289,48 +290,51 @@ ul {
 }
 
 .ru_p_banner {
-    background-image:url('../images/rugsbanner.jpg');
+    background-image:url('../images/rugsbannernew.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    background-color:#D02424;
+}
+
+.konditori_p_banner {
+    background-image:url('../images/konditoribanner.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
 .fr_p_banner {
-    background-image:url('../images/fuyubanner.jpg');
+    background-image:url('../images/fuyubannernew.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    background-color:#FFA53C;
 }
 
 .m_p_banner {
-    background-image:url('../images/mystiqbanner.jpg');
+    background-image:url('../images/mysticbannernew.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    background-color:#2556D4;
 }
 
 .zd_p_banner {
-    background-image:url('../images/zombiebanner.jpg');
+    background-image:url('../images/zombiebannernew.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    background-color:#19BE6F;
 }
 
 .g_p_banner {
-    background-image:url('../images/guesserbanner.jpg');
+    background-image:url('../images/guesserbannernew.jpg');
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    background-color:#9319BE;
 }
 
 .work_descript_contain {
