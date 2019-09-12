@@ -1005,3 +1005,15 @@ $(".desk_nav_contact").on("mouseout",function(){
         color: 'gray'
     },250);
 });
+
+$(".desk_nav_design").on("mouseover",function(){
+    $(".desk_nav_design").stop().animate({
+        color: 'white'
+    },250);
+});
+
+$(".desk_nav_design").on("mouseout",function(){
+    $(".desk_nav_design").stop().animate({
+        color: 'gray'
+    },250);
+});
