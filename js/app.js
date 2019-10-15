@@ -418,7 +418,7 @@ $(document).ready(function(){
             }
             else if($(".guesser_wc_main").css("display") == "block"){
                 $(".guesser_wc_main").fadeOut(function(){
-                    $(".guesser_wc_main").fadeIn();
+                    $(".konditori_wc_main").fadeIn();
                     konditoriSideLine();
                 });
             }
