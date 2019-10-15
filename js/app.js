@@ -394,8 +394,8 @@ $(document).ready(function(){
         wipeDown: function(){
             if($(".rugs_wc_main").css("display") == "block"){
                 $(".rugs_wc_main").fadeOut(function(){
-                    $(".konditori_wc_main").fadeIn();
-                    konditoriSideLine();
+                    $(".guesser_wc_main").fadeIn();
+                    guesserSideLine();
                 });
             }
             else if($(".konditori_wc_main").css("display") == "block"){
@@ -416,18 +416,18 @@ $(document).ready(function(){
                     zombieSideLine();
                 });
             }
-            else if($(".zombie_wc_main").css("display") == "block"){
-                $(".zombie_wc_main").fadeOut(function(){
+            else if($(".guesser_wc_main").css("display") == "block"){
+                $(".guesser_wc_main").fadeOut(function(){
                     $(".guesser_wc_main").fadeIn();
-                    guesserSideLine();
+                    konditoriSideLine();
                 });
             }
         },
         wipeUp: function(){
             if($(".konditori_wc_main").css("display") == "block"){
                 $(".konditori_wc_main").fadeOut(function(){
-                    $(".rugs_wc_main").fadeIn();
-                    rugsusaSideLine();
+                    $(".guesser_wc_main").fadeIn();
+                    guesserSideLine();
                 });
             }
             else if($(".fuyu_wc_main").css("display") == "block"){
@@ -450,8 +450,8 @@ $(document).ready(function(){
             }
             else if($(".guesser_wc_main").css("display") == "block"){
                 $(".guesser_wc_main").fadeOut(function(){
-                    $(".zombie_wc_main").fadeIn();
-                    zombieSideLine();
+                    $(".rugs_wc_main").fadeIn();
+                    rugsusaSideLine();
                 });
             }
         }
