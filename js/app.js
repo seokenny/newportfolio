@@ -569,8 +569,8 @@ window.addEventListener('wheel', function(e) {
             console.log('scrolling up');
             if($(".side_line_1").hasClass("currentLine")){
                 $(".konditori_wc_main").fadeOut(function(){
-                  $(".rugs_wc_main").fadeIn();
-                  rugsusaSideLine();
+                  $(".guesser_wc_main").fadeIn();
+                  guesserSideLine();
               });
             }
             else if ($(".side_line_2").hasClass("currentLine")){
@@ -593,8 +593,8 @@ window.addEventListener('wheel', function(e) {
             }
             else if ($(".side_line_5").hasClass("currentLine")){
                 $(".guesser_wc_main").fadeOut(function(){
-                    $(".zombie_wc_main").fadeIn();
-                    zombieSideLine();
+                    $(".rugs_wc_main").fadeIn();
+                    rugsusaSideLine();
                 });
             }
           }
@@ -602,8 +602,8 @@ window.addEventListener('wheel', function(e) {
             console.log('scrolling down');
             if($(".side_line_0").hasClass("currentLine")){
               $(".rugs_wc_main").fadeOut(function(){
-                $(".konditori_wc_main").fadeIn();
-                konditoriSideLine();
+                $(".guesser_wc_main").fadeIn();
+                guesserSideLine();
             });
           }
           else if ($(".side_line_1").hasClass("currentLine")){
@@ -624,10 +624,10 @@ window.addEventListener('wheel', function(e) {
                   zombieSideLine();
               });
           }
-          else if ($(".side_line_4").hasClass("currentLine")){
-              $(".zombie_wc_main").fadeOut(function(){
-                  $(".guesser_wc_main").fadeIn();
-                  guesserSideLine();
+          else if ($(".side_line_5").hasClass("currentLine")){
+              $(".guesser_wc_main").fadeOut(function(){
+                  $(".konditori_wc_main").fadeIn();
+                  konditoriSideLine();
               });
           }
           }
@@ -723,7 +723,7 @@ function zombieSideLine(){
 function guesserSideLine(){
     $(".side_line_5").animate({
         width:40,
-        backgroundColor:'#9319BE'
+        backgroundColor:'#8e0c4d'
     });
     document.querySelector(".side_line_5").classList.add("currentLine");
     for(var i = 0; i < 6; i++){
